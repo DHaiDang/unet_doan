@@ -16,6 +16,5 @@ model.fit_generator(myGene,steps_per_epoch=1000,epochs=1,callbacks=[model_checkp
 
 testGene = testGenerator("data/membrane/test")
 results = model.predict_generator(testGene,30,verbose=1)
-print("main")
 model.save("model_en.h5")
 saveResult("data/membrane/test",results)
